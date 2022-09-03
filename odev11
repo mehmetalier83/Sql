@@ -1,0 +1,14 @@
+
+
+--actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+(SELECT FIRST_NAME FROM ACTOR)
+UNION ALL
+(SELECT FIRST_NAME FROM CUSTOMER )
+--actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+(SELECT FIRST_NAME FROM ACTOR)
+INTERSECT
+(SELECT FIRST_NAME FROM CUSTOMER )
+--actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+(SELECT FIRST_NAME FROM ACTOR)
+EXCEPT
+(SELECT FIRST_NAME FROM CUSTOMER )
